@@ -1,0 +1,43 @@
+name: Epic
+description: A body of work that ships in parts.
+type: Proposed
+body:
+  - type: input
+    id: goal
+    attributes:
+      label: Goal in one sentence
+      description: What this delivers as a whole and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Research, threads, the plan this rolls up. Every claim carries its source.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Counted checkboxes, one per shippable part. Done means every box checks.
+      value: |
+        - [ ] AC1:
+        - [ ] AC2:
+        - [ ] AC3:
+    validations:
+      required: true
+  - type: textarea
+    id: blast-radius
+    attributes:
+      label: Blast radius
+      description: Departments, repos and surfaces this touches, and what breaks if it goes wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: obligation
+    attributes:
+      label: Test or evidence obligation
+      description: The proof that closes this. What must be green or posted before the last part counts as done.
+    validations:
+      required: true

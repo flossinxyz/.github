@@ -1,0 +1,43 @@
+name: Docs
+description: Documentation to write or fix.
+type: Proposed
+body:
+  - type: input
+    id: goal
+    attributes:
+      label: Goal in one sentence
+      description: What gets documented or corrected and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: The gap, the wrong line, the thread that exposed it. Every claim carries its source.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Counted checkboxes. Done means every box checks.
+      value: |
+        - [ ] AC1:
+        - [ ] AC2:
+        - [ ] AC3:
+    validations:
+      required: true
+  - type: textarea
+    id: blast-radius
+    attributes:
+      label: Blast radius
+      description: Who reads this doc and what they get wrong if it is wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: obligation
+    attributes:
+      label: Test or evidence obligation
+      description: The proof that closes this. The link to the shipped doc and who verified it against source.
+    validations:
+      required: true

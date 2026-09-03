@@ -1,0 +1,43 @@
+name: Decision
+description: A call that needs an owner and a ruling.
+type: Proposed
+body:
+  - type: input
+    id: goal
+    attributes:
+      label: Goal in one sentence
+      description: The decision needed and why it matters now.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: The options with trade-offs visible, and the sources behind them.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Counted checkboxes. Done means a ruling exists and every box checks.
+      value: |
+        - [ ] AC1:
+        - [ ] AC2:
+        - [ ] AC3:
+    validations:
+      required: true
+  - type: textarea
+    id: blast-radius
+    attributes:
+      label: Blast radius
+      description: What this ruling binds and what breaks if it is wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: obligation
+    attributes:
+      label: Test or evidence obligation
+      description: The proof that closes this. The ruling recorded at its one home, linked here.
+    validations:
+      required: true

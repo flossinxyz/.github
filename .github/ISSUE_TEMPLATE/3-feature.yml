@@ -1,0 +1,43 @@
+name: Feature
+description: New product behaviour.
+type: Proposed
+body:
+  - type: input
+    id: goal
+    attributes:
+      label: Goal in one sentence
+      description: What the user gets and why it matters.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Research, customer signal, market data. Every claim carries its source.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Counted checkboxes. Done means every box checks.
+      value: |
+        - [ ] AC1:
+        - [ ] AC2:
+        - [ ] AC3:
+    validations:
+      required: true
+  - type: textarea
+    id: blast-radius
+    attributes:
+      label: Blast radius
+      description: What this touches and what breaks if it goes wrong.
+    validations:
+      required: true
+  - type: textarea
+    id: obligation
+    attributes:
+      label: Test or evidence obligation
+      description: The proof that closes this. The test that goes green, or the evidence that gets posted.
+    validations:
+      required: true
